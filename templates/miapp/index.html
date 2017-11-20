@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+	<style>
+		a:hover {
+			background-color: yellow;
+		}
+	</style>
+{% endblock %}
+
+{% block title %} Inicio {% endblock %}
+
+{% block content %}
+	<h1>Lista de productos</h1>
+    
+    <table class="table table-striped">
+    	<thead>
+    		<tr>
+		      <th scope="col">#</th>
+		      <th scope="col">Descripción</th>
+		      <th scope="col">Categoría</th>
+		      <th scope="col">Precio</th>
+		      <th scope="col">IVA</th>
+		      <th scope="col">Tipo de compra</th>
+    		</tr>
+  		</thead>
+  		<tbody>
+  			{% for p in products %}
+  				<tr>
+  					<th scope="row">{{ forloop.counter }}</th>
+			      	<td>{{ p.name }}</td>
+			      	<td>{{ p.category }}</td>
+			      	<td>{{ p.price }}</td>
+			      	<td>{{ p.iva|floatformat:2 }}</td>
+			      	<td>{{ p.type_of_purchase }}</td>
+			    </tr>
+    		{% endfor %}
+    	</tbody>
+    </table>
+    
+{% endblock %}
+
+{% block javascripts %}
+	<script type="text/javascript">
+		// Mis scripts
+	</script>
+{% endblock %}
