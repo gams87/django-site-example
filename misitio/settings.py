@@ -82,7 +82,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'misitio',
-        'USER': 'misitio',
+        'USER': 'misitio_user',
         'PASSWORD': '123456',
         'HOST': 'localhost',
         'PORT': '',
