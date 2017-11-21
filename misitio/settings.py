@@ -81,8 +81,8 @@ WSGI_APPLICATION = 'misitio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mi_data_base',
-        'USER': 'aplication',
+        'NAME': 'misitio',
+        'USER': 'misitio',
         'PASSWORD': '123456',
         'HOST': 'localhost',
         'PORT': '',
@@ -130,6 +130,9 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT =     os.path.join(BASE_DIR, 'static')
+"""
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+"""
