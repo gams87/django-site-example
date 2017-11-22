@@ -78,20 +78,39 @@ WSGI_APPLICATION = 'misitio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+# ============================================
+# Configuración para Postgres
+# ============================================
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'misitio',
+        'NAME': 'my_bd',
         'USER': 'application',
         'PASSWORD': '123456',
         'HOST': 'localhost',
-        'PORT': '',
+        'PORT': '', # Puerto por defecto 5432
     },
     'OPTIONS': {
         'isolation_level': psycopg2.extensions.ISOLATION_LEVEL_SERIALIZABLE,
     }
 }
 
+# ============================================
+# Configuración para MySQL
+# ============================================
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'my_bd',
+        'USER': 'application',
+        'PASSWORD': '123456',
+        'HOST': '127.0.0.1',
+        'PORT': '', # Puerto por defecto 3306
+    }
+}
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
