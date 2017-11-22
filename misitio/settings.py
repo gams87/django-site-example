@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'misitio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'my_bd',
+        'NAME': 'mi_bd',
         'USER': 'application',
         'PASSWORD': '123456',
         'HOST': 'localhost',
@@ -103,7 +103,7 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'my_bd',
+        'NAME': 'mi_bd',
         'USER': 'application',
         'PASSWORD': '123456',
         'HOST': '127.0.0.1',
