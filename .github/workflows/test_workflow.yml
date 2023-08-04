@@ -1,0 +1,17 @@
+name: Merge secrets
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - master
+    
+jobs:
+  merge-secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge secrets
+        run: echo $SOURCE_BRANCH
+        env:
+          SOURCE_BRANCH: ${{ github.event.pull_request.head.ref }}
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.ONE_PASSWORD_SERVICE_ACCOUNT }}
+      
